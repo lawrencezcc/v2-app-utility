@@ -19,7 +19,7 @@ export default class LayoutWrapper extends React.Component {
       <Layout className="layout">
         <Head>
           <title>TFN generator</title>
-          <link rel="canonical" href="https://www.helperutility.com/" />
+          <link rel="canonical" href="https://www.helperutility.com" />
           <meta
             name="keywords"
             content="Tax file number generator, tfn generator"
@@ -37,7 +37,7 @@ export default class LayoutWrapper extends React.Component {
             property="og:description"
             content="Australian Tax file number generator is a free web utility tool for generating TFN."
           />
-          <meta property="og:url" content="https://www.helperutility.com/" />
+          <meta property="og:url" content="https://www.helperutility.com" />
           <meta property="og:site_name" content="TFN generator" />
         </Head>
         <HeaderWrapper />
