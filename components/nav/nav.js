@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Menu } from 'antd';
+import { Menu, Tooltip } from 'antd';
 
 import NAV_CONFIG from './config/nav.config';
 
@@ -14,6 +14,8 @@ export default class Nav extends React.Component {
   }
 
   render() {
+    const color = '#108ee9';
+    const promptComingSoon = 'Coming Soon...';
     return (
       <Menu
         theme="light"
@@ -21,7 +23,15 @@ export default class Nav extends React.Component {
         defaultSelectedKeys={this.state.defaultKey}
       >
         {(NAV_CONFIG || []).map((data) => (
-          <Menu.Item key={data.key}>{data.value}</Menu.Item>
+          <Menu.Item key={data.key}>
+            {data.key === 'tfn' ? (
+              data.value
+            ) : (
+              <Tooltip title={promptComingSoon} color={color}>
+                <span>{data.value}</span>
+              </Tooltip>
+            )}
+          </Menu.Item>
         ))}
       </Menu>
     );
