@@ -39,6 +39,7 @@ export default class LayoutWrapper extends React.Component {
           />
           <meta property="og:url" content="https://www.helperutility.com" />
           <meta property="og:site_name" content="TFN generator" />
+          <meta name="baidu-site-verification" content="code-0EPxdFLtDX" />
         </Head>
         <HeaderWrapper />
         <ContentWrapper />
