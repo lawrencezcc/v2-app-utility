@@ -23,8 +23,6 @@ export default class TFN extends React.Component {
 
   fetchTFN(btnState) {
     return getTFN().then((data) => {
-      console.log(data.tfn);
-      console.log(this.state.tfns);
       this.setState((prevState) => {
         return {
           tfns: [...this.state.tfns, data.tfn],

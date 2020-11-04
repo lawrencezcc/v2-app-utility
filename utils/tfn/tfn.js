@@ -44,7 +44,7 @@ class TFNUtility {
     const sum = this.getSum(pairs);
     const remainder = sum % this.modulo;
     let targetPair = {};
-    console.log('remainder: ', remainder);
+
     if (remainder === 2) {
       // the num 2 is not in the weights list, so using the smaller num (1) instead
       targetPair = pairs[pairs.length - 1];
@@ -63,7 +63,7 @@ class TFNUtility {
       const index = this.weights.findIndex((weight) => weight === pair.weight);
       reorderedPairs[index] = pair;
     });
-    console.log('reorder: ', reorderedPairs);
+
     return reorderedPairs.map((pair) => pair.value);
   }
 
@@ -75,7 +75,6 @@ class TFNUtility {
   getTFN() {
     let tfn = this.generateTempTFN();
 
-    console.log('f: ', tfn);
     if (!this.isTFNValid(tfn)) {
       tfn = this.refactorTFN(tfn);
     }
@@ -83,9 +82,6 @@ class TFNUtility {
     const tfnNumber = +tfn.join('');
     if (!tfnNumber || tfnNumber <= 0 || tfn.length !== 9) {
       this.getTFN();
-      console.log('>>>>>>>>>>>>>>>>>>>>');
-      console.log('Wrong Number: ', tfn);
-      console.log('<<<<<<<<<<<<<<<<<<<<');
     }
 
     return tfnNumber;
