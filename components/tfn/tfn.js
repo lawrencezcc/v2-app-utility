@@ -13,7 +13,7 @@ export default class TFN extends React.Component {
       tfns: [],
       generateEventData: {
         type: 'primary',
-        text: 'Generating',
+        text: 'Generate',
         isLoading: false,
       },
     };
